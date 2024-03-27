@@ -43,8 +43,8 @@ print("Forecastability Score:", model.forecastability_score)
 
 ```
 #### Output samples
-[Components](https://github.com/kAmal-NithisH18/NewSample/blob/main/checkpoint1.jpeg)
-[Result](https://github.com/kAmal-NithisH18/NewSample/blob/main/checkpoint1a.jpeg)
+![Components](https://github.com/kAmal-NithisH18/NewSample/blob/main/checkpoint1.jpeg)
+![Result](https://github.com/kAmal-NithisH18/NewSample/blob/main/checkpoint1a.jpeg)
 ``` 
 ### References and Proof:
 1. [Approximate Entropy](https://stats.stackexchange.com/questions/126829/how-to-determine-forecastability-of-time-series)<br>
