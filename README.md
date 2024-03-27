@@ -41,11 +41,11 @@ model.calculate_forecastability_score(df)
 # Print forecastability score
 print("Forecastability Score:", model.forecastability_score) 
 
-```
-#References and Proof:
-[Approximate Entropy](https://stats.stackexchange.com/questions/126829/how-to-determine-forecastability-of-time-series)
-[Stationarity](https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-time-series-analysis/)
-[Metric](https://help.llama.ai/release/native/demand/demand-topics/Time_Series_Metrics.htm)
-[TimeSeries](https://medium.com/analytics-vidhya/assessment-of-accuracy-metrics-for-time-series-forecasting-bc115b655705)
+``` 
+# References and Proof:
+[Approximate Entropy](https://stats.stackexchange.com/questions/126829/how-to-determine-forecastability-of-time-series)<br>
+[Stationarity](https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-time-series-analysis/)<br>
+[Metric](https://help.llama.ai/release/native/demand/demand-topics/Time_Series_Metrics.htm)<br>
+[TimeSeries](https://medium.com/analytics-vidhya/assessment-of-accuracy-metrics-for-time-series-forecasting-bc115b655705)<br>
 
 
