@@ -1,5 +1,5 @@
 
-# ChatterChum: Streamlit-based Chat Assistant for SQL Queries
+# ChatterChum: Streamlit-based Chat Assistant 
 
 ChatterChum is a Streamlit-based web application that serves as a chat assistant for generating SQL queries based on user questions and datasets uploaded in CSV format. The assistant utilizes the GenerativeAI model Gemini to understand user queries and generate SQL commands accordingly.
 
