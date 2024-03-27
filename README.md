@@ -42,3 +42,5 @@ model.calculate_forecastability_score(df)
 
 # Print forecastability score
 print("Forecastability Score:", model.forecastability_score)
+#Refernces
+[click here](www.google.com)
