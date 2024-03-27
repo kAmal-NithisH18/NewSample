@@ -178,6 +178,7 @@ data = {
     ]
 }
 ```
+### Output :
 ![Sample Output](https://github.com/kAmal-NithisH18/NewSample/blob/main/apioutput.jpeg)
 
 ## Checkpoint 4: Model Optimization
