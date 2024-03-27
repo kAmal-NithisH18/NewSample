@@ -53,6 +53,10 @@ print("Forecastability Score:", model.forecastability_score)
 
 In this checkpoint, batch anomaly detection with Prophet is performed on time series data with forecastability scores greater than the optimal threshold. An expanding window algorithm with a window size of 7 periods is utilized for the batch anomaly detection.
 
+### Anamoly : 
+
+An anomaly in time series data refers to an observation or pattern that deviates significantly from the expected behavior of the data. In other words, it represents a point in the time series that is unexpected or abnormal compared to the rest of the data.
+
 ## Code Description
 
 The provided code implements the batch anomaly detection process using the Prophet library. Here's a summary of the key functionalities implemented:
