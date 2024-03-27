@@ -25,9 +25,7 @@
 4. Initialize the `Model` object and calculate the forecastability score using the `calculate_forecastability_score()` method.
 5. Print the forecastability score to evaluate the results.
 
-Sample usage code:
-
-```python
+```
 # Sample usage of the Model class with a provided dataset
 import pandas as pd
 
@@ -41,6 +39,13 @@ model = Model()
 model.calculate_forecastability_score(df)
 
 # Print forecastability score
-print("Forecastability Score:", model.forecastability_score)
-#Refernces
-[click here](www.google.com)
+print("Forecastability Score:", model.forecastability_score) 
+
+```
+#References and Proof:
+[Approximate Entropy](https://stats.stackexchange.com/questions/126829/how-to-determine-forecastability-of-time-series)
+[Stationarity](https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-time-series-analysis/)
+[Metric](https://help.llama.ai/release/native/demand/demand-topics/Time_Series_Metrics.htm)
+[TimeSeries](https://medium.com/analytics-vidhya/assessment-of-accuracy-metrics-for-time-series-forecasting-bc115b655705)
+
+
