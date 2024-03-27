@@ -140,8 +140,38 @@ response = requests.post("http://localhost:8000/predict/", json=data)
 print(response.json())
 
 ```
-![Alt Text](path/to/your/image.png)
-![Alt Text](path/to/your/image.png)
+## Input Sample
+data = {
+    "data": [
+        {"point_timestamp": "2018-01-01", "point_value": 0.000364},
+        {"point_timestamp": "2018-02-01", "point_value": 0.000313},
+        {"point_timestamp": "2018-03-01", "point_value": 0.000079},
+        {"point_timestamp": "2018-04-01", "point_value": 0.000044},
+        {"point_timestamp": "2018-05-01", "point_value": 0.000000},
+        {"point_timestamp": "2018-06-01", "point_value": 0.000073},
+        {"point_timestamp": "2018-07-01", "point_value": 0.000171},
+        {"point_timestamp": "2018-08-01", "point_value": 0.000079},
+        {"point_timestamp": "2018-09-01", "point_value": 0.000000},
+        {"point_timestamp": "2018-10-01", "point_value": 0.000050},
+        {"point_timestamp": "2018-11-01", "point_value": 0.000129},
+        {"point_timestamp": "2018-12-01", "point_value": 0.000150},
+        {"point_timestamp": "2019-01-01", "point_value": 0.000993},
+        {"point_timestamp": "2019-02-01", "point_value": 0.000867},
+        {"point_timestamp": "2019-03-01", "point_value": 0.000797},
+        {"point_timestamp": "2019-04-01", "point_value": 0.000137},
+        {"point_timestamp": "2019-05-01", "point_value": 0.000406},
+        {"point_timestamp": "2019-06-01", "point_value": 0.000348},
+        {"point_timestamp": "2019-07-01", "point_value": 0.000156},
+        {"point_timestamp": "2019-08-01", "point_value": 0.000361},
+        {"point_timestamp": "2019-09-01", "point_value": 0.000121},
+        {"point_timestamp": "2019-10-01", "point_value": 0.000120},
+        {"point_timestamp": "2019-11-01", "point_value": 0.000181},
+        {"point_timestamp": "2019-12-01", "point_value": 0.000120},
+        {"point_timestamp": "2020-01-01", "point_value": 0.000677}
+    ]
+}
+
+![Sample Output](apioutput.png)
 
 ## Checkpoint 4: Model Optimization
 
@@ -175,5 +205,18 @@ from Your_Module import optimize_parameters
 optimal_params = optimize_parameters(df)
 
 print("Optimal Parameters:", optimal_params)
+
+```
+## Checkpoint 5: Batch Reduction Algorithm
+
+Checkpoint 5 introduces a batch reduction algorithm aimed at reducing the total execution time for batch fits by dynamically adjusting the window size based on changepoint detection. The goal is to decrease the number of training batches without a significant impact on accuracy.
+
+### Approach Description
+
+The proposed approach involves the following steps:
+
+1. **Changepoint Detection**: Utilize changepoint detection methods to identify significant changes or shifts in the time series data.
+2. **Dynamic Window Size**: Dynamically adjust the window size based on the detected changepoints. Increase the window size in periods of stability and decrease it when significant changes occur.
+3. **Batch Fits Optimization**: Perform batch fits using the dynamically adjusted window size to train the model efficiently while capturing the underlying patterns in the data.
 
 
