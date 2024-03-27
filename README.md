@@ -49,3 +49,131 @@ print("Forecastability Score:", model.forecastability_score)
 4. [TimeSeries](https://medium.com/analytics-vidhya/assessment-of-accuracy-metrics-for-time-series-forecasting-bc115b655705)<br>
 
 
+# Checkpoint 2: Generate Predictions
+
+In this checkpoint, batch anomaly detection with Prophet is performed on time series data with forecastability scores greater than the optimal threshold. An expanding window algorithm with a window size of 7 periods is utilized for the batch anomaly detection.
+
+## Code Description
+
+The provided code implements the batch anomaly detection process using the Prophet library. Here's a summary of the key functionalities implemented:
+
+- Import necessary libraries such as FastAPI, pandas, Prophet, and more.
+- Define a function `batch_anomaly_detection_optimized` to perform batch anomaly detection with optimized parameters.
+- Utilize the `optimize_parameters` function to obtain optimized parameters for the Prophet model.
+- Iterate through the dataset using an expanding window approach to detect anomalies.
+- Calculate Mean Absolute Percentage Error (MAPE) for each prediction.
+- Output the results including anomalies, MAPE values, number of batch fits, average batch fit time, and predicted values.
+
+## Usage
+
+To use the provided code:
+
+1. Ensure you have the required libraries installed.
+2. Load your time series dataset into the script.
+3. Preprocess the dataset as required (e.g., handle missing values, rename columns).
+4. Call the `batch_anomaly_detection_optimized` function with your dataset as input.
+5. Print or use the output as needed.
+
+Sample usage code:
+
+```python
+# Import necessary libraries
+from prophet import Prophet
+import pandas as pd
+from tuning import optimize_parameters
+from Forecastability_Score import Model
+
+# Load and preprocess the dataset
+df = pd.read_csv("path_to_your_dataset.csv")
+df = df.ffill()
+df.rename(columns={'point_timestamp':'ds', 'point_value':'y'}, inplace=True)
+
+# Perform batch anomaly detection
+result = batch_anomaly_detection_optimized(df)
+
+# Print or use the output
+print(result)
+
+```
+# Refernces
+[Prophet](??)
+
+# Checkpoint 3: REST API for Time Series Prediction
+
+This checkpoint implements a simple REST API using FastAPI, allowing users to provide any time series data and obtain predictions along with details such as forecastability score, MAPE value, number of batch fits, and average time taken for each batch fit.
+
+## Code Description
+
+The provided code sets up a FastAPI server with two endpoints:
+
+1. `/predict/`: Accepts time series data in the format of timestamps and values, performs batch anomaly detection with optimized parameters, calculates error metrics including MAPE, and returns the predictions along with other details.
+2. `/`: A welcome message endpoint.
+
+## Usage
+
+To use the provided API:
+
+1. Ensure you have FastAPI and its dependencies installed.
+2. Run the FastAPI server.
+3. Send a POST request to the `/predict/` endpoint with time series data in the specified format.
+4. Receive the predictions and details in the response.
+
+Here's an example of how to use the API with sample usage code:
+
+```python
+import requests
+import pandas as pd
+
+# Load sample dataset
+df = pd.read_csv("path_to_your_dataset.csv")
+df.drop('Unnamed: 0', axis=1, inplace=True)
+df = df.ffill()
+data_list = df.to_dict(orient='records')
+
+# Construct the desired format
+data = {"data": data_list}
+
+# Send POST request to the API
+response = requests.post("http://localhost:8000/predict/", json=data)
+
+# Check the response
+print(response.json())
+
+```
+![Alt Text](path/to/your/image.png)
+![Alt Text](path/to/your/image.png)
+
+## Checkpoint 4: Model Optimization
+
+This checkpoint focuses on optimizing the model's per-fit training time to reduce the overall execution time for the entire set of batches. This optimization is achieved through parameter tuning in order to find an optimal trade-off between training time and accuracy.
+
+### Code Description
+
+The provided code defines a function `optimize_parameters()` that optimizes Prophet model parameters. Here's a breakdown of the key components:
+
+- **Parameter Grid**: Defines a grid of parameter combinations to be tested for optimization.
+- **Model Training**: Iterates through all parameter combinations, fitting Prophet models to the provided time series data.
+- **Evaluation**: Evaluates each model based on Mean Absolute Percentage Error (MAPE) and checks for training time against a maximum allowed runtime.
+- **Selection**: Identifies the best-performing model based on MAPE and ensures its runtime does not exceed the maximum allowed runtime.
+
+### Usage
+
+To utilize the optimization function:
+
+1. Provide your time series data to the `optimize_parameters()` function.
+2. Optionally, adjust parameters such as `window_size`, `factor`, and `max_runtime` to customize the optimization process.
+3. Receive the optimal parameters for the Prophet model, which offer a balanced trade-off between training time and accuracy.
+
+```python
+import pandas as pd
+from prophet import Prophet
+from Your_Module import optimize_parameters
+
+# Load your time series data into DataFrame 'df'
+
+# Optimize model parameters
+optimal_params = optimize_parameters(df)
+
+print("Optimal Parameters:", optimal_params)
+
+
