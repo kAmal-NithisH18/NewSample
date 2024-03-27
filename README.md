@@ -15,8 +15,11 @@ ChatterChum is a Streamlit-based web application that serves as a chat assistant
 ## Screenshots
 
 ![Screenshot 1](screenshot1.png)
+### Ingest a data as csv as of now
 ![Screenshot 2](screenshot2.png)
+### Ask the questions
 ![Screenshot 3](screenshot3.png)
+### History retainned
 ![Screenshot 4](screenshot4.png)
 
 ## Installation
