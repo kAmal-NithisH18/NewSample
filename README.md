@@ -141,36 +141,37 @@ print(response.json())
 
 ```
 ### Input Sample
+```python
 data = {<br>
     "data": [<br>
-        {"point_timestamp": "2018-01-01", "point_value": 0.000364},<br>
-        {"point_timestamp": "2018-02-01", "point_value": 0.000313},<br>
-        {"point_timestamp": "2018-03-01", "point_value": 0.000079},<br>
-        {"point_timestamp": "2018-04-01", "point_value": 0.000044},<br>
-        {"point_timestamp": "2018-05-01", "point_value": 0.000000},<br>
-        {"point_timestamp": "2018-06-01", "point_value": 0.000073},<br>
-        {"point_timestamp": "2018-07-01", "point_value": 0.000171},<br>
-        {"point_timestamp": "2018-08-01", "point_value": 0.000079},<br>
-        {"point_timestamp": "2018-09-01", "point_value": 0.000000},<br>
-        {"point_timestamp": "2018-10-01", "point_value": 0.000050},<br>
-        {"point_timestamp": "2018-11-01", "point_value": 0.000129},<br>
-        {"point_timestamp": "2018-12-01", "point_value": 0.000150},<br>
-        {"point_timestamp": "2019-01-01", "point_value": 0.000993},<br>
-        {"point_timestamp": "2019-02-01", "point_value": 0.000867},<br>
-        {"point_timestamp": "2019-03-01", "point_value": 0.000797},<br>
-        {"point_timestamp": "2019-04-01", "point_value": 0.000137},<br>
-        {"point_timestamp": "2019-05-01", "point_value": 0.000406},<br>
-        {"point_timestamp": "2019-06-01", "point_value": 0.000348},<br>
-        {"point_timestamp": "2019-07-01", "point_value": 0.000156},<br>
-        {"point_timestamp": "2019-08-01", "point_value": 0.000361},<br>
-        {"point_timestamp": "2019-09-01", "point_value": 0.000121},<br>
-        {"point_timestamp": "2019-10-01", "point_value": 0.000120},<br>
-        {"point_timestamp": "2019-11-01", "point_value": 0.000181},<br>
-        {"point_timestamp": "2019-12-01", "point_value": 0.000120},<br>
-        {"point_timestamp": "2020-01-01", "point_value": 0.000677}<br>
-    ]<br>
-}<br>
-
+        {"point_timestamp": "2018-01-01", "point_value": 0.000364},
+        {"point_timestamp": "2018-02-01", "point_value": 0.000313},
+        {"point_timestamp": "2018-03-01", "point_value": 0.000079},
+        {"point_timestamp": "2018-04-01", "point_value": 0.000044},
+        {"point_timestamp": "2018-05-01", "point_value": 0.000000},
+        {"point_timestamp": "2018-06-01", "point_value": 0.000073},
+        {"point_timestamp": "2018-07-01", "point_value": 0.000171},
+        {"point_timestamp": "2018-08-01", "point_value": 0.000079},
+        {"point_timestamp": "2018-09-01", "point_value": 0.000000},
+        {"point_timestamp": "2018-10-01", "point_value": 0.000050},
+        {"point_timestamp": "2018-11-01", "point_value": 0.000129},
+        {"point_timestamp": "2018-12-01", "point_value": 0.000150},
+        {"point_timestamp": "2019-01-01", "point_value": 0.000993},
+        {"point_timestamp": "2019-02-01", "point_value": 0.000867},
+        {"point_timestamp": "2019-03-01", "point_value": 0.000797},
+        {"point_timestamp": "2019-04-01", "point_value": 0.000137},
+        {"point_timestamp": "2019-05-01", "point_value": 0.000406},
+        {"point_timestamp": "2019-06-01", "point_value": 0.000348},
+        {"point_timestamp": "2019-07-01", "point_value": 0.000156},
+        {"point_timestamp": "2019-08-01", "point_value": 0.000361},
+        {"point_timestamp": "2019-09-01", "point_value": 0.000121},
+        {"point_timestamp": "2019-10-01", "point_value": 0.000120},
+        {"point_timestamp": "2019-11-01", "point_value": 0.000181},
+        {"point_timestamp": "2019-12-01", "point_value": 0.000120},
+        {"point_timestamp": "2020-01-01", "point_value": 0.000677}
+    ]
+}
+```
 ![Sample Output](apioutput.png)
 
 ## Checkpoint 4: Model Optimization
