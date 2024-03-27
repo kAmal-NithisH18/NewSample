@@ -148,8 +148,8 @@ print(response.json())
 ```
 ### Input Sample
 ```python
-data = {<br>
-    "data": [<br>
+data = {
+    "data": [
         {"point_timestamp": "2018-01-01", "point_value": 0.000364},
         {"point_timestamp": "2018-02-01", "point_value": 0.000313},
         {"point_timestamp": "2018-03-01", "point_value": 0.000079},
