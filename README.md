@@ -1,10 +1,10 @@
 # CheckPoint 1 : Forecastability Score
 
-This project aims to develop a model capable of providing a forecastability score for time series data within the range of 0 to 10, where 10 denotes highly forecastable data and 0 indicates data close to white noise. The model utilizes various techniques, including time series feature extraction and statistical analysis, to determine the forecastability score.
+📈 This project aims to develop a model capable of providing a forecastability score for time series data within the range of 0 to 10, where 10 denotes highly forecastable data and 0 indicates data close to white noise. The model utilizes various techniques, including time series feature extraction and statistical analysis, to determine the forecastability score.
 
 ## Code Description
 
-The provided code is a Python script that implements the functionalities required for calculating the forecastability score. Here's a brief overview of the key features implemented:
+🔍 The provided code is a Python script that implements the functionalities required for calculating the forecastability score. Here's a brief overview of the key features implemented:
 
 1. **Time Series Frequency Detection:** Detects the frequency of the time series data (hourly, daily, weekly, or monthly).
 2. **Outlier Detection:** Identifies outliers in the data using the Z-score method.
@@ -17,7 +17,7 @@ The provided code is a Python script that implements the functionalities require
 
 ## Usage
 
-To use the provided code:
+🛠️ To use the provided code:
 
 1. Make sure you have Python installed on your system.
 2. Install the required dependencies listed in the code.
