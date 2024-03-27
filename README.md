@@ -215,11 +215,11 @@ optimal_params = optimize_parameters(df)
 print("Optimal Parameters:", optimal_params)
 
 ```
-# Checkpoint 5: Batch Reduction Algorithm
+## Checkpoint 5: Batch Reduction Algorithm
 
 In this checkpoint, we propose a method to dynamically determine the window size for batch processing in time series data. By using changepoint detection, we aim to reduce the number of training batches without majorly impacting accuracy.
 
-## Code Description
+### Code Description
 
 The provided code includes a function `determine_window_size(df)` that dynamically calculates the window size based on changepoint detection. Here's a brief overview of the function:
 
