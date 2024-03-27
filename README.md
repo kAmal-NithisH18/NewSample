@@ -53,7 +53,7 @@ print("Forecastability Score:", model.forecastability_score)
 
 In this checkpoint, batch anomaly detection with Prophet is performed on time series data with forecastability scores greater than the optimal threshold. An expanding window algorithm with a window size of 7 periods is utilized for the batch anomaly detection.
 
-### Anamaly : 
+### Anomaly : 
 
 An anomaly in time series data refers to an observation or pattern that deviates significantly from the expected behavior of the data. In other words, it represents a point in the time series that is unexpected or abnormal compared to the rest of the data.
 
@@ -102,7 +102,7 @@ print(result)
 
 ```
 ### Refernces
-[Prophet](??)
+[Prophet](https://facebook.github.io/prophet/docs/installation.html#python)
 
 # Checkpoint 3: REST API for Time Series Prediction
 
@@ -215,16 +215,41 @@ optimal_params = optimize_parameters(df)
 print("Optimal Parameters:", optimal_params)
 
 ```
-## Checkpoint 5: Batch Reduction Algorithm
+# Checkpoint 5: Batch Reduction Algorithm
 
-Checkpoint 5 introduces a batch reduction algorithm aimed at reducing the total execution time for batch fits by dynamically adjusting the window size based on changepoint detection. The goal is to decrease the number of training batches without a significant impact on accuracy.
+In this checkpoint, we propose a method to dynamically determine the window size for batch processing in time series data. By using changepoint detection, we aim to reduce the number of training batches without majorly impacting accuracy.
 
-### Approach Description
+## Code Description
 
-The proposed approach involves the following steps:
+The provided code includes a function `determine_window_size(df)` that dynamically calculates the window size based on changepoint detection. Here's a brief overview of the function:
 
-1. **Changepoint Detection**: Utilize changepoint detection methods to identify significant changes or shifts in the time series data.
-2. **Dynamic Window Size**: Dynamically adjust the window size based on the detected changepoints. Increase the window size in periods of stability and decrease it when significant changes occur.
-3. **Batch Fits Optimization**: Perform batch fits using the dynamically adjusted window size to train the model efficiently while capturing the underlying patterns in the data.
+- **Input**: A pandas DataFrame (`df`) containing the time series data with columns 'ds' (timestamps) and 'y' (values).
+- **Output**: An integer representing the dynamically determined window size.
+
+The function utilizes the `ruptures` library to perform changepoint detection, specifically using the l2-norm cost function. It then calculates the maximum gap between changepoints and determines the window size based on this gap.
+
+## Usage
+
+To use the `determine_window_size` function:
+
+1. Pass your time series data as a pandas DataFrame to the function.
+2. The function will return the dynamically determined window size based on changepoint detection.
+
+Sample usage code:
+
+```python
+import pandas as pd
+from determine_window_size import determine_window_size
+
+# Load your time series data into a pandas DataFrame (df)
+df = pd.read_csv("path_to_your_dataset.csv")
+
+# Determine the window size dynamically
+window_size = determine_window_size(df)
+
+print("Dynamically Determined Window Size:", window_size)
+
+```
+![Output](https://github.com/kAmal-NithisH18/NewSample/blob/main/checkpoint5.jpeg)
 
 
